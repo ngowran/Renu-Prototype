@@ -1,6 +1,7 @@
 import pyrebase
 import Adafruit_DHT
 import time
+from datetime import datetime
 
 sensor = Adafruit_DHT.DHT11
 
@@ -18,11 +19,11 @@ i = 0
 
 while True:
   
-  # Setting our values
+  # Setting our values.
   humidty, temperature = Adafruit_DHT.read_retry(sensor, pin)
   sensor_data = ('Temp={0:0.1f}*C Humidty={1:0.1f}%'.format(temperature, humidty))
   
-  # Prints in terminal
+  # Prints in terminal.
   print(sensor_data)
   
   # Setting the current time to a variable.
